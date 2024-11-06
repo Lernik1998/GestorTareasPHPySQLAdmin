@@ -1,19 +1,8 @@
 <?php
 
-//session_start();
-
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-
-// Comprobar si hay una tarea en la sesión
-// if (!isset($_SESSION['tarea'])) {
-//     header("Location: ./gestorTareas.php");
-//     exit();
-// }
-
-// $tarea = unserialize($_SESSION['tarea']);
-
 
 ?>
 <!DOCTYPE html>
@@ -32,9 +21,7 @@ error_reporting(E_ALL);
         <h1>Editar Tarea</h1>
 
         <form action="../Controladores/editarTarea.php" method="post" class="edit-task-form">
-            <!-- <input type="hidden" name="indice" value="<"> -->
-            <!-- < ? php echo $indice; ?> -->
-
+            
             <div class="form-group">
                 <label for="tarea">Tarea</label>
                 <input type="text" name="tarea" id="tarea" value="<?php echo htmlspecialchars($tarea->getNombre()); ?>">

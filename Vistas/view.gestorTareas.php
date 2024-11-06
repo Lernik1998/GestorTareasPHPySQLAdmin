@@ -1,4 +1,5 @@
-<?php ini_set('display_errors', 1);
+<?php 
+ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
@@ -66,7 +67,7 @@ $arrayTareas = $manager->obtenerTareas();
             <?php if (empty($arrayTareas)): ?>
                 <h3>No hay tareas creadas</h3>
             <?php else: ?>
-                <!-- Si no recorre el array -->
+                <!-- Si no,recorre el array -->
                 <?php foreach ($arrayTareas as $index => $tarea): ?>
                     <div class="task-item">
                         <h2><?php echo htmlspecialchars($tarea->getNombre()); ?></h2>
@@ -82,9 +83,8 @@ $arrayTareas = $manager->obtenerTareas();
                         </form>
 
                         <!-- Depurando -->
-                        <?php echo "El indice de la tarea en el ARRAY: " . htmlspecialchars($index) ?>
-                        <p></p>
-                        <?php echo "El indice de la tarea en el ARRAY: " . htmlspecialchars($tarea->getId()) ?>
+                        <!-- < ?php echo "El indice de la tarea en el ARRAY: " . htmlspecialchars($index) ?> -->
+                        <!-- < ?php echo "El indice de la tarea en el ARRAY: " . htmlspecialchars($tarea->getId()) ?> -->
 
                     </div>
                 <?php endforeach; ?>

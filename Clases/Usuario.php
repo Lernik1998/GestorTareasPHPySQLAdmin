@@ -7,7 +7,6 @@ class Usuario
 
     public function __construct($nombre, $contra)
     {
-
         $this->nombre = $nombre;
         $this->setContra($contra);
     }
@@ -33,7 +32,6 @@ class Usuario
         $this->contra = $contra;
     }
 
-
     // Lo usamos desde el set, que hace la validacion
     public static function validarClave($contra)
     {
@@ -47,9 +45,5 @@ class Usuario
             throw new ContrasenaInvalidaException("La contraseña debe contener al menos un número.");
         }
     }
-    // public function obtenerUsuarios(){
-    //     require "../config.php";
 
-    //     $selectUsuariosParaSelect = 
-    // }
 }

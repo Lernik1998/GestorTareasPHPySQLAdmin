@@ -32,6 +32,14 @@ $error = $_SESSION["error"] ?? ""; ?>
             <form action="cerrarSesion.php" method="post">
                 <button type="submit" name="cerrarSesion">Cerrar sesión</button>
             </form>
+
+            <br>
+            <ul>
+                <li>La contraseña debe tener al menos 5 caracteres.</li>
+                <li>La contraseña debe contener al menos una letra mayúscula.</li>
+                <li>La contraseña debe contener al menos un número.</li>
+            </ul>
+
         </div>
 
         <?php if (!empty($error)): ?>
